@@ -3,7 +3,6 @@ const Twit = require('twit')
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-
 var T = new Twit({
   consumer_key:         process.env.TWITTER_CONSUMER_KEY,
   consumer_secret:      process.env.TWITTER_CONSUMER_SECRET,
