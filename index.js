@@ -17,10 +17,10 @@ client.once('ready', () => {
 
   stream.on('tweet', function (tweet) {
     //...
-    var url = "https://twitter.com/" + tweet.user.screen_name + "/status/" + tweet.id_str;
+    var url = "https://twitter.com/" + tweet.user.owner_screen_name + "/status/" + tweet.id_str;
     try {
         let channel = client.channels.fetch(process.env.DISCORD_CHANNEL_ID).then(channel => {
-          channel.send("@everyone " + url)
+          channel.send("Hey everyone me2oon just posted a tweet check it out!" + url)
         }).catch(err => {
           console.log(err)
         })
